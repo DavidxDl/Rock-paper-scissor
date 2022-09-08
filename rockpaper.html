@@ -8,7 +8,7 @@
 <body>
     <script>
         let choices = ['Rock', 'Paper', 'Scissor'];
-        const userChoice = 'Rock';
+        const userChoice = prompt('Rock Paper or Scissor?').toLowerCase();
         const computerChoice = getComputerChoice();
         
         function getComputerChoice (){
@@ -19,33 +19,33 @@
         }
         function playRound(user, pc){
            switch(user){
-            case 'Rock': 
+            case 'rock': 
             if (pc === 'Paper'){
-                console.log('You lost!, PC had Paper');
+                alert('You lost!, PC had Paper');
             } else if (pc === 'Scissor'){
-                console.log('You won!, PC had Scissor');
+                alert('You won!, PC had Scissor');
             } else{
-                console.log('It\'s a tie! PC had Rock');
+                alert('It\'s a tie! PC had Rock');
             } break;
-            case 'Paper':
+            case 'paper':
                 if(pc === 'Scissor'){
-                    console.log('You lost!, PC had Scissor');
+                    alert('You lost!, PC had Scissor');
                 } else if (pc === 'Rock'){
-                    console.log('You Won!, PC had Rock');
+                    alert('You Won!, PC had Rock');
                 } else {
-                    console.log('It\'s a tie!, PC had Paper');
+                    alert('It\'s a tie!, PC had Paper');
                 } break;
-            case 'Scissor':
+            case 'scissor':
                 if (pc === 'Rock'){
-                    console.log('You lost!, PC had Rock');
+                    alert('You lost!, PC had Rock');
                 } else if (pc === 'Paper'){
-                    console.log('You Won! PC had Paper');
+                    alert('You Won! PC had Paper');
                 } else {
-                    console.log('It\'s a tie!, PC had Scissor');
+                    alert('It\'s a tie!, PC had Scissor');
                 }   break;
            }
         }
-        console.log(playRound(userChoice, computerChoice));
+        alert(playRound(userChoice, computerChoice));
 
     </script>
     
