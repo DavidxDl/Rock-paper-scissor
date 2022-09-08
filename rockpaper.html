@@ -8,8 +8,8 @@
 <body>
     <script>
         let choices = ['Rock', 'Paper', 'Scissor'];
-        const userChoice = prompt('Rock Paper or Scissor?').toLowerCase();
-        const computerChoice = getComputerChoice();
+        
+        
         
         function getComputerChoice (){
 
@@ -18,6 +18,7 @@
 
         }
         function playRound(user, pc){
+
            switch(user){
             case 'rock': 
             if (pc === 'Paper'){
@@ -45,7 +46,17 @@
                 }   break;
            }
         }
-        alert(playRound(userChoice, computerChoice));
+        function game (){
+            for (i = 0; i <= 5; i++){
+                let userChoice = prompt('Rock Paper or Scissor?').toLowerCase();
+                const computerChoice = getComputerChoice();
+                playRound(userChoice, computerChoice);
+
+            }
+        }
+
+
+        alert(game());
 
     </script>
     
