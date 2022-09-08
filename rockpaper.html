@@ -18,15 +18,35 @@
 
         }
         function playRound(user, pc){
-            if (user === 'Rock' && pc === 'Paper'){
-                console.log('You Lost!');
-            } else if (user === 'Rock' && pc ==='Scissor'){
-                console.log('You Won');
-            } else {
-                console.log('It\'s a tie!')
-            } 
+           switch(user){
+            case 'Rock': 
+            if (pc === 'Paper'){
+                console.log('You lost!, PC had Paper');
+            } else if (pc === 'Scissor'){
+                console.log('You won!, PC had Scissor');
+            } else{
+                console.log('It\'s a tie! PC had Rock');
+            } break;
+            case 'Paper':
+                if(pc === 'Scissor'){
+                    console.log('You lost!, PC had Scissor');
+                } else if (pc === 'Rock'){
+                    console.log('You Won!, PC had Rock');
+                } else {
+                    console.log('It\'s a tie!, PC had Paper');
+                } break;
+            case 'Scissor':
+                if (pc === 'Rock'){
+                    console.log('You lost!, PC had Rock');
+                } else if (pc === 'Paper'){
+                    console.log('You Won! PC had Paper');
+                } else {
+                    console.log('It\'s a tie!, PC had Scissor');
+                }   break;
+           }
         }
         console.log(playRound(userChoice, computerChoice));
+
     </script>
     
 </body>
