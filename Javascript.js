@@ -29,19 +29,22 @@ function getComputerChoice (){
 
 
 function playRound(user, pc){
+    if (userS >= 5 ){score.textContent = 'You won Congrats'
+ }  else if (pcS >= 5){score.textContent = 'Sorry You have lost! '}
+    else{
     switch(user){
             case 'rock': 
             if (pc === 'Paper'){
                               
                 para.textContent = 'You Lost!, he had Paper';
                 
-                score.textContent = `User Score: ${userS}  pc Score: ${pcS++}`;
+                score.textContent = `User Score: ${userS}  pc Score: ${pcS += 1}`;
 
             } else if (pc === 'Scissor'){
                
                 para.textContent = 'You Won!, he had Scissor';
                  
-                score.textContent = `User Score: ${userS++}  pc Score: ${pcS}`;
+                score.textContent = `User Score: ${userS += 1}  pc Score: ${pcS}`;
             } else{
                
                 para.textContent = 'its a tie!, he had Rock';
@@ -52,12 +55,12 @@ function playRound(user, pc){
                    
                 para.textContent = 'You Lost! he had Scissor';
                  
-                score.textContent = `User Score: ${userS}  pc Score: ${pcS++}`;
+                score.textContent = `User Score: ${userS}  pc Score: ${pcS += 1}`;
                 } else if (pc === 'Rock'){
                    
                     para.textContent = 'You Won!, he had Rock';
                     
-                    score.textContent = `User Score: ${userS++}  pc Score: ${pcS}`;
+                    score.textContent = `User Score: ${userS += 1}  pc Score: ${pcS}`;
                 } else {
                    
                 para.textContent = 'its a tie!';
@@ -68,12 +71,12 @@ function playRound(user, pc){
                    
                 para.textContent = 'You Lost! he had Rock';
                  
-                score.textContent = `User Score: ${userS}  pc Score: ${pcS++}`;
+                score.textContent = `User Score: ${userS}  pc Score: ${pcS += 1}`;
                 } else if (pc === 'Paper'){
                    
                     para.textContent = 'You Won! he had Paper';
                     
-                    score.textContent = `User Score: ${userS++}  pc Score: ${pcS}`;
+                    score.textContent = `User Score: ${userS += 1}  pc Score: ${pcS}`;
                 } else {
                    
                 para.textContent = 'its a tie!';
@@ -82,6 +85,7 @@ function playRound(user, pc){
                 
            }
         }
+    }
         
         
 
