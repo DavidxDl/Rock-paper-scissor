@@ -2,63 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <title>Rock paper Scissor</title>
+    <link rel="Stylesheet" href="Style.css">
 </head>
 <body>
-    <script>
-        let choices = ['Rock', 'Paper', 'Scissor'];
-        
-        
-        
-        function getComputerChoice (){
-
-           let computerChoice = choices[Math.floor(Math.random()*3)];
-            return computerChoice;
-
-        }
-        function playRound(user, pc){
-
-           switch(user){
-            case 'rock': 
-            if (pc === 'Paper'){
-                alert('You lost!, PC had Paper');
-            } else if (pc === 'Scissor'){
-                alert('You won!, PC had Scissor');
-            } else{
-                alert('It\'s a tie! PC had Rock');
-            } break;
-            case 'paper':
-                if(pc === 'Scissor'){
-                    alert('You lost!, PC had Scissor');
-                } else if (pc === 'Rock'){
-                    alert('You Won!, PC had Rock');
-                } else {
-                    alert('It\'s a tie!, PC had Paper');
-                } break;
-            case 'scissor':
-                if (pc === 'Rock'){
-                    alert('You lost!, PC had Rock');
-                } else if (pc === 'Paper'){
-                    alert('You Won! PC had Paper');
-                } else {
-                    alert('It\'s a tie!, PC had Scissor');
-                }   break;
-           }
-        }
-        function game (){
-            for (i = 0; i <= 5; i++){
-                let userChoice = prompt('Rock Paper or Scissor?').toLowerCase();
-                const computerChoice = getComputerChoice();
-                playRound(userChoice, computerChoice);
-
-            }
-        }
-
-
-        alert(game());
-
-    </script>
+    <div class="container">
+        <div class="score"></div>
+        <div class="game">
+            <button id="button1" class="button" value="rock"><img src="./images/alpine-landscape-rock-rubble-01g-al1.svg" alt=""></button>
+            <button id="button2" class="button" value="paper"><img src="./images/toilet-paper-svgrepo-com.svg" alt=""></button>
+            <button id="button3" class="button" value="scissor"><img src="./images/scissors-svgrepo-com.svg" alt=""></button>
+            
+        </div>
+        <div class="result"><p>Results</p>
+            <p id="resultss"></p>
+        </div>
+    </div>
     
+    
+    <script src="Javascript.js"></script>
 </body>
 </html>
